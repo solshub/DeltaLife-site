@@ -1,0 +1,486 @@
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+		<title>DeltaLife's official page</title>
+	</head>
+	<style>
+		 :root {
+			--background: #ececec;
+			--text: #1f1f1f;
+			--box: #41434b;
+		}
+		body {
+			margin: 0;
+			background-color: var(--background);
+			width: 100%;
+			height: 100%;
+			font-family: 'Lato', sans-serif;
+			font-weight: 400;
+		}
+		p {
+			margin: 0;
+		}
+		h1, h2, h4 {
+			margin: 10px 0;
+		}
+		h1 {
+			text-transform: uppercase;
+		}
+		article h1 {
+			font-size: 2em;
+		}
+		h3 {
+			margin: 3px;
+		}
+		a {			
+			text-transform: uppercase;
+		}
+		a:link, a:visited, a:link:active, a:visited:active {
+			text-decoration: none;
+			color: inherit;
+		}
+		hr {
+			margin: 20px 10%;
+		}
+		td, th {
+			color: inherit;
+			font-weight: inherit;
+			text-align: inherit;	
+		}
+		ul {
+			text-align: center;
+			list-style-position: inside;
+		}
+		nav {
+			display: table;
+			height: 20px;
+			color: white;
+			overflow: hidden;
+			border-collapse: collapse;
+		}
+		nav a {
+			display: table-cell;
+			padding: 4px 25px;
+			border-left: 2px solid rgba(0, 0, 0, 0.2);
+			border-right: 2px solid rgba(0, 0, 0, 0.2);
+		}
+		nav a:hover {
+			transition: background-color 0.5s;
+			background-color: rgba(255, 255, 255, 0.075);
+		}
+		code {
+			white-space: nowrap;
+		}
+		strike {
+			font-size: smaller;
+		}
+		.title {
+			width: 60%;
+			padding: 30px 0;
+			max-width: 770px;
+		}
+		.center {
+			margin: 0 auto;			
+		}
+		img.center {
+ 			display: block;
+		}
+		.note {
+			display: block;
+			font-size: x-small;
+		}
+		.container-i, .container-b, .container-bs div, .container {
+			background-color: white;
+			box-shadow: 0px 0px 3px 0.3px grey;
+			padding: 30px 50px;
+			text-align: center;
+			color: #1f1f1f;
+		}
+		.container {
+			width: 60%;
+			box-shadow: 0 0 0;
+			position: relative;
+			max-width: 880px;
+			min-width: 580px;
+			margin-top: 10px;
+			margin-bottom: 50px;
+		}
+		.container figure img {
+			border-radius: 10px;
+			box-shadow: 0px 0px 3px 0.3px black;
+			min-width: 350px;
+			max-width: 400px;
+		}
+		.container > header {
+			top: 0;
+			left: 0;
+			width: 100%;
+			position: absolute;
+			background-color: var(--box);
+			box-shadow: 0px 0px 3px 0.3px grey;
+		}
+		.container-y {
+			width: 70%;
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+		.container-y h3 {
+			text-align: right;
+			padding-right: 30px;
+			opacity: 0.9;
+		}
+		.container-y p {
+			background-color: lightgoldenrodyellow;
+			padding: 12px 20px;
+			text-align: justify;
+			color: black;
+			font-size: smaller;
+		}
+		.container-i {
+			padding: 0;
+			width: 90%;
+			background: none;
+			box-shadow: none;
+			position: relative;
+		}
+		.container-i article {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100%;
+		}
+		.container-i img {
+			filter: blur(1px);
+			width: 100%;
+			height: 100%;
+			max-width: 750px;
+		}
+		.container-b, .container-bs div {
+			position: relative;
+			background-color: #41434b;
+			display: inline-block;
+			padding: 0;
+			margin: 8px;
+			border-radius: 7.5px;
+			border: none;
+		}
+		.container-b table, .container-bs div table {
+			color: white;
+			text-align: center;
+  			border-collapse: collapse;
+			border: 0px solid rgba(0, 0, 0, 0.1);
+		}
+		.container-b tr, .container-bs div tr {
+			text-transform: lowercase;
+		}
+		.container-b td, .container-b th, .container-bs div td, .container-bs div th {			
+			padding: 2px 7.5px;
+			border: 1px solid rgba(0, 0, 0, 0.1);
+		}
+		.container-b th, .container-bs div th {
+			background-color: rgba(255, 255, 255, 0.075);
+		}
+		.container-b, .container-bs div {
+			border: none;
+		}
+		.container-b tr:first-child td, .container-b tr:first-child th,
+		.container-bs div tr:first-child td, .container-bs div tr:first-child th {
+			text-transform: uppercase;
+			padding-top: 5px;
+			border-top: none;
+		}
+		.container-b tr:last-child td, .container-b tr:last-child th,
+		.container-bs div tr:last-child td, .container-bs div tr:last-child th {
+			border-bottom: none;
+		}
+		.container-b tr td:first-child, .container-b tr th:first-child,
+		.container-bs div tr td:first-child, .container-bs div tr th:first-child {
+			border-left: none;
+		}
+		.container-b tr td:last-child, .container-b tr th:last-child,
+		.container-bs div tr td:last-child, .container-bs div tr th:last-child {
+			border-right: none;
+		}
+		.container-bs {
+			display: table;
+		}
+		.container-bs div {
+			vertical-align: middle;			
+		}
+		.container-bs div table {
+			font-size: small;
+		}
+	</style>
+	<body>
+		<header>
+			<img class='title center' src='https://i.imgur.com/3mairyC.png'>
+		</header>
+		<section class='container center'>
+			<header>
+				<nav class="center">
+					<a href="#future">Features</a>
+					<a href="#tips">Tips</a>
+					<!-- <a href="https://www.patreon.com/user?u=19866320">Patreon</a> -->
+					<a href="https://discord.gg/4pJt3XS">Support</a>
+					<a href="https://discordapp.com/oauth2/authorize?client_id=681224613274845252&scope=bot&permissions=60480">Invite</a>
+				</nav>
+			</header><br>
+			<article>
+				<header>
+					<h1>Welcome to DeltaLife</h1>
+					<b>This bot's focused on being a life simulator!</b><br>
+					<strike>(yes, something like BitLife)</strike><br><br>
+					What's in front of you is a project that has been going since late 2019.<br>
+					Countless days of hard work were put into the development.<br>
+					I hope you like it.<br>
+					<article class="container-y center">
+						<h3>Before everything...</h3>
+						<p>
+							Check <code>d!tutorial</code>! There's a
+							<b>full usage guide</b> that goes through everything.
+							You can use <code><b>d!help</b></code> for a list of all
+							commands, or <code><b>d!help [command]</b></code> for a
+							detailed description of a specific command.
+						</p>
+					</article>
+					Please check the end of this overview for details about permissions.
+				</header>
+				<hr>
+				<section>
+					<h2>Interact with other players!</h2>
+					<section class="container-i center" style="height: 400px;">
+						<img src="https://images2.imgbox.com/5a/17/42zI18yy_o.gif">
+						<article>
+							<div class="container-b">
+								<table>
+									<tr><th>💬 Friendly</th></tr>
+									<tr><td>bite</td></tr>
+									<tr><td>chat</td></tr>
+									<tr><td>comfort</td></tr>
+									<tr><td>gift</td></tr>
+									<tr><td>hug</td></tr>
+									<tr><td>joke</td></tr>
+									<tr><td>lick</td></tr>
+									<tr><td>praise</td></tr>
+									<tr><td>sorry</td></tr>
+									<tr><td>tickle</td></tr>
+								</table>
+							</div>
+							<div class="container-b">
+								<table>
+									<tr><th>💢 Mean</th></tr>
+									<tr><td>Argue</td></tr>
+									<tr><td>Insult</td></tr>
+									<tr><td>Mock</td></tr>
+									<tr><td>Poke</td></tr>
+									<tr><td>Prank</td></tr>
+									<tr><td>Slap</td></tr>
+									<tr><th>Fight</th></tr>
+									<tr><th>Murder</th></tr>
+									<tr><th>Rob</th></tr>
+									<tr><th>Stab</th></tr>
+								</table>
+							</div>
+							<div class="container-b">
+								<table>
+									<tr><th>💘 Romantic</th></tr>
+									<tr><td>cuddle</td></tr>
+									<tr><td>date</td></tr>
+									<tr><td>flirt</td></tr>
+									<tr><td>give-rose</td></tr>
+									<tr><td>hold-hands</td></tr>
+									<tr><td>kiss</td></tr>
+									<tr><td>love</td></tr>
+									<tr><td>serenade</td></tr>
+									<tr><td>wink</td></tr>
+									<tr><th>sex</th></tr>
+								</table>
+							</div>
+						</article>
+					</section>
+					<article class="container-y center">
+						<p>
+							Choose a interaction and use it with another user
+							by doing <code><b>d![action-name] @[user]</b></code>!
+							It'll work even if you one of you haven't created a character.
+							Check the full list of interactions above,
+							or using <code><b>d!social</b></code>.
+						</p>
+					</article>
+					<h4>
+						<ul>
+							<li>Over 30 different interactions</li>
+							<li>More than 400 handpicked gifs</li>
+							<li>Friendship and romance points!</li>
+						</ul>
+					</h4>
+					<p>
+						DeltaLife has an enormous library of gifs made available<br>
+						for the users through many different interaction commands
+					</p>
+					<figure><img src="https://i.imgur.com/PvToXk0.png" style="width: 60%"></figure>
+					<p>
+						You can keep track of your relationship with other players<br>
+						as you gain <b>friendship</b> or <b>romance</b> with each other through playing
+					</p>
+					<article class="container-y center">
+						<p>
+							Each interaction gives (or takes from) you and the other player
+							different <code>friend</code> or <code>love</code> values.
+							Interaction enough times, you'll get a title
+							(like <code>friends</code>, <code>rivals</code> or <code>lovebirds</code>)!
+							You can keep track on all of that using <code><b>d!relation @[user]</b></code>.
+						</p>
+					</article>
+				</section>	
+				<hr>			
+				<section>
+					<h2>Live your virtual life<span class="note">these aren't all the commands</span></h2>
+					<article>
+						<div class="container-bs center">
+							<div>
+								<table>
+									<tr><th>Reports</th></tr>
+									<tr><td>relation</td></tr>
+									<tr><td>profile</td></tr>
+									<tr><td>balance</td></tr>
+									<tr><td>achievs</td></tr>
+									<tr><td>addict</td></tr>
+									<tr><td>sick</td></tr>
+									<tr><td>pregnant</td></tr>
+								</table>
+							</div>
+							<div>
+								<table>
+									<tr><th>Character</th></tr>
+									<tr><td>create</td></tr>
+									<tr><td>picture</td></tr>
+									<tr><td>death</td></tr>
+									<tr><td>stats</td></tr>
+									<tr><td>marry</td></tr>
+									<tr><td>divorce</td></tr>
+								</table>
+							</div>
+							<div>
+								<table>
+									<tr><th>Actions</th></tr>
+									<tr><td>act</td></tr>
+									<tr><td>crime</td></tr>
+									<tr><td>age</td></tr>
+									<tr><td>drink</td></tr>
+									<tr><td>drugs</td></tr>
+									<tr><td>random</td></tr>
+								</table>
+							</div>
+							<div>
+								<table>
+									<tr><th>World</th></tr>
+									<tr><td>study</td></tr>
+									<tr><td>work</td></tr>
+									<tr><td>retire</td></tr>
+									<tr><td>drop</td></tr>
+									<tr><td>rehab</td></tr>
+									<tr><td>doctor</td></tr>
+								</table>
+							</div>
+							<div>
+								<table>
+									<tr><th>Online</th></tr>
+									<tr><td>oldest</td></tr>
+									<tr><td>richest</td></tr>
+									<tr><td>drunkest</td></tr>
+									<tr><td>dirtiest</td></tr>
+									<tr><td>winners</td></tr>
+									<tr><td>gamblers</td></tr>
+								</table>
+							</div>	
+						</div>
+						<div class="container-bs center">
+							<div>
+								<table>
+									<tr><th>Support</th></tr>
+									<tr><td>social</td></tr>
+									<tr><td>illegal</td></tr>
+									<tr><td>zodiac</td></tr>
+								</table>
+							</div>
+							<div>
+								<table>
+									<tr><th>Settings</th></tr>
+									<tr><td>prefix</td></tr>
+									<tr><td>configs</td></tr>
+									<tr><td>preference</td></tr>
+								</table>
+							</div>
+							<div>
+								<table>
+									<tr><th>Gambling</th></tr>
+									<tr><td>slots</td></tr>
+									<tr><td>roulette</td></tr>
+									<tr><td>lottery</td></tr>
+								</table>
+							</div>
+							<div>
+								<table>
+									<tr><th>Premium</th></tr>
+									<tr><td>revive</td></tr>
+									<tr><td>setAge</td></tr>
+									<tr><td>setZodiac</td></tr>
+								</table>
+							</div>
+						</div>
+					</article>
+					<h4>
+						<ul>
+							<li>A big total of 52 commands</li>
+							<li>3 exclusive premium commands</li>
+						</ul>
+					</h4>
+					<article class="container-y center">
+						<p>
+							Most functions will require you to first create
+							(with <code><b>d!create</b></code>) a character,
+							with which you'll do everything! Check the aforementioned <code><b>d!tutorial</b></code>
+							for a how to live your character's life, step by step.
+						</p>
+					</article>
+					<p>
+						With DeltaLife, you can create your own character and live his life, <br>
+						from joining kindergarden to getting a degree and then retiring from your job!
+					</p>
+					<figure><img src="https://i.imgur.com/w0j33uw.png" style="width: 60%"></figure>
+					<figure><img src="https://i.imgur.com/A8iuG0R.png" style="width: 60%"></figure>
+					<p>
+						Get money, get sick, get pregnant, get drunk and get married<br>
+						go study, go work, go rob someone, go gambling, go see a doctor<br>
+						with DeltaLife you can do everything!
+					</p>
+				</section>
+				<article class="container-y center">
+					<h3>Footnote about permissions...</h3>
+					<p style="padding-bottom: 0">
+						<code><b>MANAGE_MESSAGES</b></code> is required ONLY
+						to allow for the eventual deletion of command messages
+						(to keep everything clean) or the bot's own messages.
+					</p>
+					<p style="padding-bottom: 0">
+						<code><b>EMBED_LINKS</b></code> is there cause most command
+						responses make use of embeds (some of them including images).
+					</p>
+					<p style="padding-bottom: 0">
+						<code><b>ATTACH_FILES</b></code> is required for only
+						one specific command, which responses includes a script-generated
+						image that can only be sent by attaching it to the message.
+					</p>
+					<p>
+						<code><b>ADD_REACTIONS</b></code> is there for many commands
+						that require user input. Other than that, sometimes you'll need to
+						navigate between embeds, that's only possible with reactions.
+					</p>
+				</article>
+			</article>
+		</section>
+	</body>
+</html>
