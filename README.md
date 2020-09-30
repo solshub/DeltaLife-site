@@ -1,1 +1,1 @@
-[Acesse o site:](https://solshub.github.io/DeltaLife-site/): https://solshub.github.io/DeltaLife-site/
+[Acesse o site:](https://solshub.github.io/DeltaLife-site/) https://solshub.github.io/DeltaLife-site/
